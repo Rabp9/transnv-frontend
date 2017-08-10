@@ -9,10 +9,11 @@
  * Main module of the application.
  */
 angular
-  .module('transnvFrontendApp', [
+.module('transnvFrontendApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngTouch'
-  ]);
+    'ngTouch',
+    'mega-menu'
+]);
