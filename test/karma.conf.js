@@ -31,6 +31,8 @@ module.exports = function(config) {
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-mega-menu/src/js/angular-mega-menu.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/ngprogress/build/ngprogress.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

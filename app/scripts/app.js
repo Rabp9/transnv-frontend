@@ -15,5 +15,7 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'mega-menu'
+    'mega-menu',
+    'ngProgress',
+    'ui.router'
 ]);
