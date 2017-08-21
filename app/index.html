@@ -24,7 +24,7 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-        <div class="navbar navbar-default yamm" role="navigation">
+        <div class="navbar navbar-default yamm navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -210,7 +210,16 @@
             </div>
         </div>
     </div>
-
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.index" index="slide.index">
+            <img class="img-slider" ng-src="{{ path_location}}/img/slides/{{ slide.url }}">
+            <div class="carousel-caption animated fadeInLeft" ng-if="slide.titulo !== null && slide.titulo !== undefined && slide.titulo !== ''"
+                ng-style="{'background': slide.color_bg, 'color': slide.color }">
+                <h1>{{slide.titulo}}</h1>
+                <p>{{slide.contenido}}</p>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
     </div>
