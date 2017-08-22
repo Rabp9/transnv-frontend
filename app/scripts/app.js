@@ -17,5 +17,22 @@ angular
     'ngTouch',
     'mega-menu',
     'ngProgress',
-    'ui.router'
-]);
+    'ui.router',
+    'ui.bootstrap'
+])
+.config(function($stateProvider, $urlRouterProvider) {
+    var mainState = {
+        name: 'main',
+        url: '/',
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
+        title: 'Home'
+    };
+    
+    $stateProvider.state(mainState);
+    $urlRouterProvider.when('', '/');
+})
+.run(function($rootScope, $window, $state) {
+    
+});

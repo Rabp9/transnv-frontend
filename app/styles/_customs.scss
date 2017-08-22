@@ -1,0 +1,50 @@
+.carousel {
+    height: -webkit-calc(100vh - #{$navbar-height});
+    height:    -moz-calc(100vh - #{$navbar-height});
+    height:         calc(100vh - #{$navbar-height});
+
+    min-height: 400px;
+}
+
+.img-slider {
+    margin: auto; 
+    width: 100%;
+}
+
+.container-fluid {
+    @include container-fixed(0);
+}
+
+.header-section {
+    padding: 0px 10px;
+    display: flex;
+    color: $color-white;
+    align-items: center;
+    height: 60px;
+    
+    -webkit-box-shadow: 10px 10px 50px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 50px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 50px -10px rgba(0,0,0,0.75);
+  
+    background: rgba(22,71,127,1);
+    background: -moz-linear-gradient(left, rgba(22,71,127,1) 0%, rgba(22,71,127,1) 41%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(22,71,127,1)), color-stop(41%, rgba(22,71,127,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left, rgba(22,71,127,1) 0%, rgba(22,71,127,1) 41%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(22,71,127,1) 0%, rgba(22,71,127,1) 41%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(22,71,127,1) 0%, rgba(22,71,127,1) 41%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(22,71,127,1) 0%, rgba(22,71,127,1) 41%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16477f', endColorstr='#000000', GradientType=1 );
+}
+
+.navbar-transparent {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+
+.desplazamiento {
+    padding: 10px 0px; 
+    text-align: center;
+    span {
+        font-size: 2em;
+    }
+}

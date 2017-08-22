@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="transnvFrontendApp">
 <head>
     <meta charset="utf-8">
     <title></title>
@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="transnvFrontendApp">
+<body ng-cloak>
     <!--[if lte IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="header">
-        <div class="navbar navbar-default yamm navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default yamm navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -208,22 +208,11 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
-    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-        <div uib-slide ng-repeat="slide in slides track by slide.index" index="slide.index">
-            <img class="img-slider" ng-src="{{ path_location}}/img/slides/{{ slide.url }}">
-            <div class="carousel-caption animated fadeInLeft" ng-if="slide.titulo !== null && slide.titulo !== undefined && slide.titulo !== ''"
-                ng-style="{'background': slide.color_bg, 'color': slide.color }">
-                <h1>{{slide.titulo}}</h1>
-                <p>{{slide.contenido}}</p>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <ui-view ng-hide='layout.loading' ></ui-view>
     </div>
-    <div class="container">
-        <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
-    </div>
-
     <div class="footer">
         <div class="container">
             <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>

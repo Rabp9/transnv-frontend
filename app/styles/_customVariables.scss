@@ -15,12 +15,19 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
+
+$brand-primary:         $color-default !default; // #337ab7
+$brand-success:         $color-primary !default;
+$brand-info:            $color-secondary !default;
+$brand-warning:         $color-white !default;
+$brand-danger:          $color-black !default;
+/*
 $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
-
+*/
 
 //== Scaffolding
 //
@@ -329,7 +336,8 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         26px !default;
+// $grid-gutter-width:         30px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -362,7 +370,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    70px !default;
+$navbar-height:                    60px !default;
 // $navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
@@ -375,9 +383,9 @@ $navbar-default-bg:                $color-primary !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                darken($color-white, 40%) !default;
+$navbar-default-link-color:                darken($color-white, 20%) !default;
 // $navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          darken($color-white, 50%) !default;
+$navbar-default-link-hover-color:          darken($color-white, 20%) !default;
 //$navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         $color-white !default;
@@ -428,7 +436,8 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding:                          10px 15px !default;
+$nav-link-padding:                          10px 20px !default;
+// $nav-link-padding:                          10px 15px !default;
 $nav-link-hover-bg:                         $gray-lighter !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
