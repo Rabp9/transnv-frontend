@@ -18,7 +18,8 @@ angular
     'mega-menu',
     'ngProgress',
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'zumba.angular-waypoints'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
     var mainState = {

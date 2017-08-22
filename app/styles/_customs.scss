@@ -15,6 +15,10 @@
     @include container-fixed(0);
 }
 
+.container-footer {
+    @include container-fixed(300px);
+}
+
 .header-section {
     padding: 0px 10px;
     display: flex;
@@ -47,4 +51,13 @@
     span {
         font-size: 2em;
     }
+}
+
+.footer {
+    background: $color-primary;
+    color: $color-white;
+}
+
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6 {
+    visibility: hidden
 }
