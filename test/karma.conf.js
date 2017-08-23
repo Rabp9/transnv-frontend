@@ -35,6 +35,8 @@ module.exports = function(config) {
       'bower_components/ngprogress/build/ngprogress.min.js',
       'bower_components/waypoints/lib/noframework.waypoints.js',
       'bower_components/angular-waypoints/dist/angular-waypoints.js',
+      'bower_components/slick-carousel/slick/slick.min.js',
+      'bower_components/angular-slick/dist/slick.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

@@ -1,5 +1,7 @@
 {
-    "elements": {},
+    "elements": {
+        "slick": {}
+    },
     "attributes": {
         "uib-carousel": {
             "context": "div"

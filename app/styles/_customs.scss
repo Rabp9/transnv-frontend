@@ -22,6 +22,7 @@
 .header-section {
     padding: 0px 10px;
     display: flex;
+    margin-bottom: 15px;
     color: $color-white;
     align-items: center;
     height: 60px;
@@ -56,4 +57,38 @@
 .footer {
     background: $color-primary;
     color: $color-white;
+}
+
+.img-sn-link-md {
+    width: 18px;
+    top: -4px;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.thumbnail {
+    border-width: 0px;
+}
+
+.navbar-default {
+    border: none;
+}
+
+.yamm .yamm-content {
+    padding: 8px 12px;
+}
+
+.yamm-content {
+    h3 {
+        color: $color-primary;
+    }
+}
+
+.breadcrumb {
+    a {
+        color: $color-white;
+    }
 }

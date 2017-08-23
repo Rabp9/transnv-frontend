@@ -1,8 +1,8 @@
 .carousel {
     @media (min-width: $screen-sm-min) {
-        height: -webkit-calc(92vh - #{$navbar-height});
-        height:    -moz-calc(92vh - #{$navbar-height});
-        height:         calc(92vh - #{$navbar-height});
+        height: -webkit-calc(86vh - #{$navbar-height});
+        height:    -moz-calc(86vh - #{$navbar-height});
+        height:         calc(86vh - #{$navbar-height});
 
         min-height: 400px;
     }
