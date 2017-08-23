@@ -23,7 +23,7 @@ angular.module('transnvFrontendApp')
                 url: 'http://via.placeholder.com/550x450'
             }
         ];
-    };
+    }
     
     init();
 });
