@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name transnvFrontendApp.controller:ServicioCtrl
+ * @name transnvFrontendApp.controller:ServiciosCtrl
  * @description
- * # ServicioCtrl
+ * # ServiciosCtrl
  * Controller of the transnvFrontendApp
  */
 angular.module('transnvFrontendApp')
-  .controller('ServicioCtrl', function () {
+  .controller('ServiciosCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

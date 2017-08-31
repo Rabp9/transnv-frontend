@@ -50,9 +50,57 @@ angular
         title: 'Historia'
     };
     
+    var directorioState = {
+        name: 'directorio',
+        url: '/directorio',
+        templateUrl: 'views/directorio.html',
+        controller: 'DirectorioCtrl',
+        controllerAs: 'directorio',
+        title: 'Directorio Telefónico'
+    };
+    
+    var ubicacionState = {
+        name: 'ubicacion',
+        url: '/ubicacion',
+        templateUrl: 'views/ubicacion.html',
+        controller: 'UbicacionCtrl',
+        controllerAs: 'ubicacion',
+        title: 'Ubicación'
+    };
+    
+    var noticiasState = {
+        name: 'noticias',
+        url: '/noticias/{id}',
+        templateUrl: 'views/noticias.html',
+        controller: 'NoticiasCtrl',
+        controllerAs: 'noticias',
+        params: {
+            id: {
+                value: '1'
+            }
+        }
+    };
+    
+    var serviciosState = {
+        name: 'servicios',
+        url: '/servicios/{id}',
+        templateUrl: 'views/servicios.html',
+        controller: 'ServiciosCtrl',
+        controllerAs: 'servicios',
+        params: {
+            id: {
+                value: '1'
+            }
+        }
+    };
+    
     $stateProvider.state(mainState);
     $stateProvider.state(quienesSomosState);
     $stateProvider.state(historiaState);
+    $stateProvider.state(serviciosState);
+    $stateProvider.state(noticiasState);
+    $stateProvider.state(directorioState);
+    $stateProvider.state(ubicacionState);
     $urlRouterProvider.when('', '/');
 })
 .run(function($rootScope, $window, $state) {

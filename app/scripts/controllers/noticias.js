@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name transnvFrontendApp.controller:NoticiaCtrl
+ * @name transnvFrontendApp.controller:NoticiasCtrl
  * @description
- * # NoticiaCtrl
+ * # NoticiasCtrl
  * Controller of the transnvFrontendApp
  */
 angular.module('transnvFrontendApp')
-  .controller('NoticiaCtrl', function () {
+  .controller('NoticiasCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
