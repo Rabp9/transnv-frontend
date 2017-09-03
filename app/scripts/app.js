@@ -103,6 +103,13 @@ angular
     $stateProvider.state(ubicacionState);
     $urlRouterProvider.when('', '/');
 })
-.run(function($rootScope, $window, $state) {
+.run(function($rootScope, $state, $window, $sce) {
     
+    $('#mmNav a').click(function() {
+        $('.dropdown.open').removeClass('open');
+    });
+    $rootScope.$on('$stateChangeSuccess', function(event, toParams, fromState, fromParams) {
+        $rootScope.title = $state.current.title;
+        
+    });
 });
