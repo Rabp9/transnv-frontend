@@ -8,10 +8,10 @@
  * Controller of the transnvFrontendApp
  */
 angular.module('transnvFrontendApp')
-  .controller('QuienesSomosCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('QuienesSomosCtrl', function ($scope, ngProgressFactory) {
+    
+    $scope.progressbar = ngProgressFactory.createInstance();
+    $scope.progressbar.start();
+    
+    $scope.progressbar.complete();
+});
