@@ -5,6 +5,9 @@
     "attributes": {
         "uib-carousel": {
             "context": "div"
+        },
+        "picturefill": {
+            "context": "picture"
         }
     }
 }

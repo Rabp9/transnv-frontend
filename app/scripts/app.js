@@ -20,7 +20,8 @@ angular
     'ui.router',
     'ui.bootstrap',
     'zumba.angular-waypoints',
-    'slick'
+    'slick',
+    'ngPicturefill'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
     var mainState = {
@@ -103,7 +104,8 @@ angular
     $stateProvider.state(ubicacionState);
     $urlRouterProvider.when('', '/');
 })
-.run(function($rootScope, $state, $window, $sce) {
+.run(function($rootScope, $state, $window, $sce, envservice) {
+    $rootScope.path_location = envservice.getHost();
     
     $('#mmNav a').click(function() {
         $('.dropdown.open').removeClass('open');

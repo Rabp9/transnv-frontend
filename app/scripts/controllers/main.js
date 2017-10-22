@@ -8,22 +8,26 @@
  * Controller of the transnvFrontendApp
  */
 angular.module('transnvFrontendApp')
-.controller('MainCtrl', function ($scope) {
+.controller('MainCtrl', function ($scope, $q, $rootScope, slidesservice, $sce, 
+    /*infosservice*/ imgResponsiveFilter) {
+        
     $scope.myInterval = 4000;
     $scope.noWrapSlides = false;
     
-    function init() {
-        $scope.slides = [
-            {
-                id: 1,
-                url: 'http://via.placeholder.com/350x150'
-            },
-            {
-                id: 2,
-                url: 'http://via.placeholder.com/550x450'
-            }
-        ];
-    }
+    $scope.init = function() {
+        return $q.all([
+            slidesservice.get().$promise/*,
+            infosservice.getDataMany(search).$promise*/
+        ]).then(function(data) {
+            // Slides
+            $scope.slides = data[0].slides;
+        });
+    };
     
-    init();
+    $scope.getSlideSrc = function(slide, size) {
+        var src = $rootScope.path_location + 'img/slides/' + slide.imagen;
+        return $sce.trustAsResourceUrl(imgResponsiveFilter(src, size));
+    };
+    
+    $scope.init();
 });
