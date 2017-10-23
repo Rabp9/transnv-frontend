@@ -9,22 +9,25 @@
  */
 angular.module('transnvFrontendApp')
 .controller('MainCtrl', function ($scope, $q, $rootScope, slidesservice, $sce, 
-    infosservice, imgResponsiveFilter, serviciosservice) {
+    infosservice, imgResponsiveFilter, serviciosservice, noticiasservice) {
         
     $scope.myInterval = 4000;
     $scope.noWrapSlides = false;
     $scope.path_location = $rootScope.path_location;
-    var search = ['transnv_resumen'];
+    var search = ['transnv_resumen', 'ubicacion_codigo'];
     
     $scope.init = function() {
         return $q.all([
             slidesservice.get().$promise,
             infosservice.getDataMany(search).$promise,
-            serviciosservice.getSome({amount: 2}).$promise
+            serviciosservice.getSome({amount: 2}).$promise,
+            noticiasservice.get().$promise
         ]).then(function(data) {
             $scope.slides = data[0].slides;
             $scope.infos = data[1].info;
+            $scope.ubicacion_url = $sce.trustAsResourceUrl($scope.infos.ubicacion_codigo);
             $scope.servicios = data[2].servicios;
+            $scope.noticias = data[3].noticias;
         });
     };
     
@@ -32,6 +35,7 @@ angular.module('transnvFrontendApp')
         var src = $rootScope.path_location + 'img/slides/' + slide.imagen;
         return $sce.trustAsResourceUrl(imgResponsiveFilter(src, size));
     };
+    
     
     $scope.init();
 });
