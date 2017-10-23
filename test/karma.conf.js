@@ -37,6 +37,8 @@ module.exports = function(config) {
       'bower_components/angular-waypoints/dist/angular-waypoints.js',
       'bower_components/slick-carousel/slick/slick.min.js',
       'bower_components/angular-slick/dist/slick.js',
+      'bower_components/picturefill/dist/picturefill.js',
+      'bower_components/angular-picture/src/angular-picture.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

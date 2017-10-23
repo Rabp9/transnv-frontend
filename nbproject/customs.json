@@ -6,6 +6,9 @@
         "uib-carousel": {
             "context": "div"
         },
+        "zum-waypoint": {
+            "context": "div"
+        },
         "picturefill": {
             "context": "picture"
         }

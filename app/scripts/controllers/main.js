@@ -9,18 +9,20 @@
  */
 angular.module('transnvFrontendApp')
 .controller('MainCtrl', function ($scope, $q, $rootScope, slidesservice, $sce, 
-    /*infosservice*/ imgResponsiveFilter) {
+    infosservice, imgResponsiveFilter) {
         
     $scope.myInterval = 4000;
     $scope.noWrapSlides = false;
+    var search = ['transnv_resumen'];
     
     $scope.init = function() {
         return $q.all([
-            slidesservice.get().$promise/*,
-            infosservice.getDataMany(search).$promise*/
+            slidesservice.get().$promise,
+            infosservice.getDataMany(search).$promise
         ]).then(function(data) {
             // Slides
             $scope.slides = data[0].slides;
+            $scope.infos = data[1].info;
         });
     };
     
