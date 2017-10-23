@@ -24,22 +24,12 @@
 <div id="servicios" class="container" zum-waypoint="waypoints" down="wp2.on" up="wp2.off" offset="75%">
     <h2 class="header-section wp2" ng-class="{'animated fadeInLeft': waypoints.wp2.on}">Servicios</h2>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6" ng-repeat="servicio in servicios">
             <div class="thumbnail">
-                <img src="http://via.placeholder.com/350x150" alt="Servicio 1">
+                <img ng-src="{{ path_location + 'img/servicios/' + servicio.portada }}" alt="{{ servicio.titulo }}">
                 <div class="caption">
-                    <h3>Servicio 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget luctus enim, sit amet imperdiet enim. Integer sed elementum nisi. Etiam interdum, mauris in ultrices maximus, nunc magna rhoncus nisi, eu sagittis sem leo quis felis. Quisque congue viverra diam a lobortis. Nullam vel leo urna. Donec tempor vitae risus ut iaculis. Ut consectetur, metus sit amet dignissim hendrerit, mauris felis varius ante, et ultrices elit nibh quis libero. Fusce efficitur nisl non augue commodo, sed ultrices orci tempor. Nullam eleifend lorem a justo vehicula cursus. Donec feugiat malesuada porta. Pellentesque sed metus dui. Donec id velit ac ligula ultrices vestibulum at eget lacus.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="thumbnail">
-                <img src="http://via.placeholder.com/350x150" alt="Servicio 2">
-                <div class="caption">
-                    <h3>Servicio 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget luctus enim, sit amet imperdiet enim. Integer sed elementum nisi. Etiam interdum, mauris in ultrices maximus, nunc magna rhoncus nisi, eu sagittis sem leo quis felis. Quisque congue viverra diam a lobortis. Nullam vel leo urna. Donec tempor vitae risus ut iaculis. Ut consectetur, metus sit amet dignissim hendrerit, mauris felis varius ante, et ultrices elit nibh quis libero. Fusce efficitur nisl non augue commodo, sed ultrices orci tempor. Nullam eleifend lorem a justo vehicula cursus. Donec feugiat malesuada porta. Pellentesque sed metus dui. Donec id velit ac ligula ultrices vestibulum at eget lacus.</p>
+                    <h3>{{ servicio.titulo }}</h3>
+                    <div ng-bind-html="servicio.resumen"></div>
                     <p><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
                 </div>
             </div>
