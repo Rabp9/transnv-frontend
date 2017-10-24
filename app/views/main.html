@@ -66,6 +66,7 @@
         <div class="col-sm-4" ng-repeat="noticia in noticias">
             <div class="row">
                 <div class="col-sm-5">
+                    <!-- Picturefill -->
                     <img class="img-responsive" ng-src="{{ path_location + 'img/noticias/' + noticia.portada }}" alt="{{ noticia.titulo }}">
                 </div>
                 <div class="col-sm-7">
@@ -79,26 +80,9 @@
 <div id="clientes" class="container" zum-waypoint="waypoints" down="wp5.on" up="wp5.off" offset="75%">
     <h2 class="header-section" ng-class="{'animated fadeInLeft': waypoints.wp5.on}">Clientes</h2>
     <div class="row">
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente1">
-        </div>
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente2">
-        </div>
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente3">
-        </div>
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente4">
-        </div>
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente5">
-        </div>
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente6">
-        </div>
-        <div class="col-sm-3">
-            <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Cliente7">
+        <div class="col-sm-3" ng-repeat="cliente in clientes">
+            <!-- Picturefill -->
+            <img class="img-responsive" ng-src="{{ path_location + 'img/clientes/' + cliente.imagen }}" alt="{{ cliente.razon_social }}">
         </div>
     </div>
 </div>
