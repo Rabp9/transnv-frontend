@@ -26,6 +26,7 @@
     <div class="row">
         <div class="col-sm-6" ng-repeat="servicio in servicios">
             <div class="thumbnail">
+                <!-- Picturefill -->
                 <img ng-src="{{ path_location + 'img/servicios/' + servicio.portada }}" alt="{{ servicio.titulo }}">
                 <div class="caption">
                     <h3>{{ servicio.titulo }}</h3>
@@ -62,57 +63,13 @@
     <slick class="row slider single-item" arrows="false" autoplay="true" autoplaySpeed="5000" 
         current-index="index" responsive="breakpoints" slides-to-show="3" slides-to-scroll="1"
         speed="900">
-        <div class="col-sm-4">
+        <div class="col-sm-4" ng-repeat="noticia in noticias">
             <div class="row">
                 <div class="col-sm-5">
-                    <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Noticia 1">
+                    <img class="img-responsive" ng-src="{{ path_location + 'img/noticias/' + noticia.portada }}" alt="{{ noticia.titulo }}">
                 </div>
                 <div class="col-sm-7">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 1</p>
-                    <a class="btn-link" href="#">Ver más</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="row">
-                <div class="col-sm-5">
-                    <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Noticia 1">
-                </div>
-                <div class="col-sm-7">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 2</p>
-                    <a class="btn-link" href="#">Ver más</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="row">
-                <div class="col-sm-5">
-                    <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Noticia 1">
-                </div>
-                <div class="col-sm-7">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 3</p>
-                    <a class="btn-link" href="#">Ver más</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="row">
-                <div class="col-sm-5">
-                    <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Noticia 1">
-                </div>
-                <div class="col-sm-7">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 4</p>
-                    <a class="btn-link" href="#">Ver más</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="row">
-                <div class="col-sm-5">
-                    <img class="img-responsive" src="http://via.placeholder.com/350x150" alt="Noticia 1">
-                </div>
-                <div class="col-sm-7">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 5</p>
+                    <div ng-bind-html="noticia.resumen"></div>
                     <a class="btn-link" href="#">Ver más</a>
                 </div>
             </div>
