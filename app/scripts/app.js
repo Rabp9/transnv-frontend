@@ -104,14 +104,22 @@ angular
     $stateProvider.state(ubicacionState);
     $urlRouterProvider.when('', '/');
 })
-.run(function($rootScope, $state, $window, $sce, envservice) {
+.run(function($rootScope, $state, $window, $sce, envservice, infosservice) {
     $rootScope.path_location = envservice.getHost();
+    var search = ['enlace_1_link', 'enlace_2_link', 'enlace_3_link', 'enlace_1_titulo', 'enlace_2_titulo', 'enlace_3_titulo'];
+    
+    $rootScope.init = function() {
+        infosservice.getDataMany(search, function(data) {
+            $rootScope.infos = data.info;
+        });
+    };
     
     $('#mmNav a').click(function() {
         $('.dropdown.open').removeClass('open');
     });
     $rootScope.$on('$stateChangeSuccess', function(event, toParams, fromState, fromParams) {
-        $rootScope.title = $state.current.title;
-        
+        $rootScope.title = $state.current.title; 
     });
+    
+    $rootScope.init();
 });
