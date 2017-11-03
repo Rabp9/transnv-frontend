@@ -34,10 +34,10 @@
             <div class="col-sm-9">
                 <div class="row">
                     <ul class="nav navbar-nav hidden-xs pull-right">
-                        <li><a href="tel:123456789"><span class="glyphicon glyphicon-phone"></span> 123456789</a></li>
-                        <li><a href="mailto:transnv@transnv.com"><span class="glyphicon glyphicon-send"></span> transnv@transnv.com</a></li>
+                        <li><a href="tel:{{ infos.telefono }}"><span class="glyphicon glyphicon-phone"></span> {{ infos.telefono }}</a></li>
+                        <li><a href="mailto:{{ infos.email }}"><span class="glyphicon glyphicon-send"></span> {{ infos.email }}</a></li>
                         <li>
-                            <a ng-href="http://facebook.com" target="_blank">
+                            <a ng-href="{{ infos.facebook_link }}" target="_blank">
                                 <img class="glyphicon img-sn-link-md" src="images/facebook-header.svg" alt="Facebook"/>
                             </a>
                         </li>
