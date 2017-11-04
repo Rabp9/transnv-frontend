@@ -9,8 +9,17 @@
         "zum-waypoint": {
             "context": "div"
         },
+        "uib-dropdown": {
+            "context": "li"
+        },
+        "uib-dropdown-toggle": {
+            "context": "a"
+        },
         "picturefill": {
             "context": "picture"
+        },
+        "ui-sref": {
+            "context": "a"
         }
     }
 }

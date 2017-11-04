@@ -107,7 +107,8 @@ angular
 .run(function($rootScope, $state, $window, $sce, envservice, infosservice) {
     $rootScope.path_location = envservice.getHost();
     var search = ['enlace_1_link', 'enlace_2_link', 'enlace_3_link', 'enlace_1_titulo', 
-        'enlace_2_titulo', 'enlace_3_titulo', 'telefono', 'direccion', 'email', 'facebook_link'];
+        'enlace_2_titulo', 'enlace_3_titulo', 'telefono', 'direccion', 'email', 'facebook_link',
+        'quienes_somos_mensaje', 'historia_mensaje'];
     
     $rootScope.init = function() {
         infosservice.getDataMany(search, function(data) {
