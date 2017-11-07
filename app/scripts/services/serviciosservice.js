@@ -13,6 +13,10 @@ angular.module('transnvFrontendApp')
         getSome: {
             method: 'GET',
             url: envservice.getHost() + 'servicios/get_some/:amount.json',
+        },
+        getIndex: {
+            method: 'GET',
+            url: envservice.getHost() + 'servicios/getIndex.json'
         }
     });
 });

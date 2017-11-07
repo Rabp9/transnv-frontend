@@ -104,7 +104,7 @@ angular
     $stateProvider.state(ubicacionState);
     $urlRouterProvider.when('', '/');
 })
-.run(function($rootScope, $state, $window, $sce, envservice, infosservice) {
+.run(function($rootScope, $state, $window, $sce, envservice, infosservice, serviciosservice) {
     $rootScope.path_location = envservice.getHost();
     var search = ['enlace_1_link', 'enlace_2_link', 'enlace_3_link', 'enlace_1_titulo', 
         'enlace_2_titulo', 'enlace_3_titulo', 'telefono', 'direccion', 'email', 'facebook_link',
@@ -116,9 +116,14 @@ angular
         });
     };
     
+    serviciosservice.getIndex(function(data) {
+        $rootScope.servicios_index = data.servicios;
+    });
+    
     $('#mmNav a').click(function() {
         $('.dropdown.open').removeClass('open');
     });
+    
     $rootScope.$on('$stateChangeSuccess', function(event, toParams, fromState, fromParams) {
         $rootScope.title = $state.current.title; 
     });
