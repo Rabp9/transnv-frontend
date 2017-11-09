@@ -104,21 +104,24 @@ angular
     $stateProvider.state(ubicacionState);
     $urlRouterProvider.when('', '/');
 })
-.run(function($rootScope, $state, $window, $sce, envservice, infosservice, serviciosservice) {
+.run(function($rootScope, $state, $window, $sce, envservice, infosservice, serviciosservice,
+    noticiasservice, $q) {
     $rootScope.path_location = envservice.getHost();
     var search = ['enlace_1_link', 'enlace_2_link', 'enlace_3_link', 'enlace_1_titulo', 
         'enlace_2_titulo', 'enlace_3_titulo', 'telefono', 'direccion', 'email', 'facebook_link',
         'quienes_somos_mensaje', 'historia_mensaje', 'copyright'];
     
     $rootScope.init = function() {
-        infosservice.getDataMany(search, function(data) {
-            $rootScope.infos = data.info;
+        $q.all([
+             infosservice.getDataMany(search).$promise,
+             serviciosservice.getSome({amount: 2}).$promise,
+             noticiasservice.getSome({amount: 3}).$promise
+        ]).then(function(data) {
+            $rootScope.infos_index = data[0].info;
+            $rootScope.servicios_index = data[1].servicios;
+            $rootScope.noticias_index = data[2].noticias;
         });
     };
-    
-    serviciosservice.getIndex(function(data) {
-        $rootScope.servicios_index = data.servicios;
-    });
     
     $('#mmNav a').click(function() {
         $('.dropdown.open').removeClass('open');

@@ -34,10 +34,10 @@
             <div class="col-sm-9">
                 <div class="row">
                     <ul class="nav navbar-nav hidden-xs pull-right">
-                        <li><a href="tel:{{ infos.telefono }}"><span class="glyphicon glyphicon-phone"></span> {{ infos.telefono }}</a></li>
-                        <li><a href="mailto:{{ infos.email }}"><span class="glyphicon glyphicon-send"></span> {{ infos.email }}</a></li>
+                        <li><a href="tel:{{ infos_index.telefono }}"><span class="glyphicon glyphicon-phone"></span> {{ infos_index.telefono }}</a></li>
+                        <li><a href="mailto:{{ infos_index.email }}"><span class="glyphicon glyphicon-send"></span> {{ infos_index.email }}</a></li>
                         <li>
-                            <a ng-href="{{ infos.facebook_link }}" target="_blank">
+                            <a ng-href="{{ infos_index.facebook_link }}" target="_blank">
                                 <img class="glyphicon img-sn-link-md" src="images/facebook-header.svg" alt="Facebook"/>
                             </a>
                         </li>
@@ -68,7 +68,7 @@
                                                                     <h3><a ui-sref="quienes-somos">¿Quienes Somos?</a></h3>
                                                                     <hr>
                                                                     <p style="width: 250px;">
-                                                                        {{ infos.quienes_somos_mensaje }}
+                                                                        {{ infos_index.quienes_somos_mensaje }}
                                                                     </p>
                                                                     <p><a ui-sref="quienes-somos" class="btn btn-primary">Ver más</a></p>
                                                                 </div>
@@ -80,7 +80,7 @@
                                                                     <h3><a ui-sref="historia">Historia</a></h3>
                                                                     <hr>
                                                                     <p style="width: 250px;">
-                                                                        {{ infos.historia_mensaje }}
+                                                                        {{ infos_index.historia_mensaje }}
                                                                     </p>
                                                                     <p><a ui-sref="historia" class="btn btn-default" role="button">Ver más</a></p>
                                                                 </div>
@@ -125,34 +125,14 @@
                                             <li>
                                                 <div class="yamm-content">
                                                     <ul class="media-list">
-                                                        <li class="media" style="width: 450px;">
+                                                        <li class="media" style="width: 450px;" ng-repeat="noticia in noticias_index">
                                                             <div class="media-left">
-                                                                <a ui-sref="noticias({id: 1})">
-                                                                    <img style="width: 150px;" src="http://via.placeholder.com/350x150" alt="Noticia 1">
+                                                                <a ui-sref="noticias({id: {{ noticia.id }}})">
+                                                                    <img style="width: 150px;" ng-src="{{ path_location + 'img/noticias/' + noticia.portada }}" alt="{{ noticia.title }}">
                                                                 </a>
                                                             </div>
                                                             <div class="media-body">
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 1</p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="media" style="width: 450px;">
-                                                            <div class="media-left">
-                                                                <a ui-sref="noticias({id: 2})">
-                                                                    <img style="width: 150px;" src="http://via.placeholder.com/350x150" alt="Noticia 1">
-                                                                </a>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 1</p>
-                                                            </div>
-                                                        </li>
-                                                        <li class="media" style="width: 450px;">
-                                                            <div class="media-left">
-                                                                <a ui-sref="noticias({id: 3})">
-                                                                    <img style="width: 150px;" src="http://via.placeholder.com/350x150" alt="Noticia 1">
-                                                                </a>
-                                                            </div>
-                                                            <div class="media-body">
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Noticia 1</p>
+                                                                <p ng-bind-html="noticia.titulo"></p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -216,13 +196,13 @@
                 <div class="col-sm-4 center">
                     <h3>Enlaces de Interés</h3>
                     <p>
-                        <a class="btn-link" ng-href="{{ infos.enlace_1_link }}">{{ infos.enlace_1_titulo }}</a>
+                        <a class="btn-link" ng-href="{{ infos_index.enlace_1_link }}">{{ infos_index.enlace_1_titulo }}</a>
                     </p>
                     <p>
-                        <a class="btn-link" ng-href="{{ infos.enlace_2_link }}">{{ infos.enlace_2_titulo }}</a>
+                        <a class="btn-link" ng-href="{{ infos_index.enlace_2_link }}">{{ infos_index.enlace_2_titulo }}</a>
                     </p>
                     <p>
-                        <a class="btn-link" ng-href="{{ infos.enlace_3_link }}">{{ infos.enlace_3_titulo }}</a>
+                        <a class="btn-link" ng-href="{{ infos_index.enlace_3_link }}">{{ infos_index.enlace_3_titulo }}</a>
                     </p>
                 </div>
                 <div class="col-sm-4 center">
@@ -235,9 +215,9 @@
                     <address>
                         <dl>
                             <dt>Teléfono</dt>
-                            <dd><a style="color: white;" ng-href="tel:{{ infos.telefono }}">{{ infos.telefono }}</a></dd>
+                            <dd><a style="color: white;" ng-href="tel:{{ infos_index.telefono }}">{{ infos_index.telefono }}</a></dd>
                             <dt>Dirección</dt>
-                            <dd>{{ infos.direccion }}</dd>
+                            <dd>{{ infos_index.direccion }}</dd>
                         </dl>
                     </address>
                 </div>
@@ -245,7 +225,7 @@
         </div>
         <hr>
         <div style="text-align: center; height: 30px;">
-            {{ infos.copyright }}
+            {{ infos_index.copyright }}
         </div>
     </div>
 
