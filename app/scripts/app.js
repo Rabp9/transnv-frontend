@@ -129,7 +129,7 @@ angular
     });
     
     $rootScope.$on('$stateChangeSuccess', function(event, toParams, fromState, fromParams) {
-        $rootScope.title = $state.current.title; 
+        $rootScope.title = $state.current.title;
     });
     
     $rootScope.init();
