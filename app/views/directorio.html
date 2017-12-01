@@ -12,15 +12,10 @@
     <div class="table-responsive">
         <table class="table table-bordered">
             <tbody>
-                <tr>
-                    <td style="width: 10%;"><img class="img-responsive" src="http://via.placeholder.com/80x120" alt="transportes"></td>
-                    <td style="width: 70%;"><h3>Juan Guillermo Palacios Gutierrez</h3></td>
-                    <td style="width: 20%;"><h3><span class="glyphicon glyphicon-phone"></span> 948524605</h3></td>
-                </tr>
-                <tr>
-                    <td style="width: 10%;"><img class="img-responsive" src="http://via.placeholder.com/80x120" alt="transportes"></td>
-                    <td style="width: 70%;"><h3>Juan Guillermo Palacios Gutierrez</h3></td>
-                    <td style="width: 20%;"><h3><span class="glyphicon glyphicon-phone"></span> 948524605</h3></td>
+                <tr ng-repeat="contacto in contactos">
+                    <td style="width: 10%;"><img class="img-responsive" ng-src="{{ path_location + 'img/contactos/' +  contacto.imagen }}" alt="{{ contacto.nombre_completo }}"></td>
+                    <td style="width: 70%;"><h3>{{ contacto.nombre_completo }}</h3></td>
+                    <td style="width: 20%;"><h3><span class="glyphicon glyphicon-phone"></span><a href="tel:{{ contacto.telefono }}">{{ contacto.telefono }}</a></h3></td>
                 </tr>
             </tbody>
         </table>

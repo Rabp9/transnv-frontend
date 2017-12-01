@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-sm-7">
                     <div ng-bind-html="noticia.resumen"></div>
-                    <a class="btn-link" href="#">Ver más</a>
+                    <a class="btn-link" ui-sref="noticias({id: {{ noticia.id }}})">Ver más</a>
                 </div>
             </div>
         </div>
