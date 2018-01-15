@@ -7,8 +7,12 @@
 }
 
 .img-slider {
-    margin: auto; 
+    margin: auto;
     width: 100%;
+}
+
+#ngProgress {
+    background-color: $color-primary !important;
 }
 
 .container-fluid {
