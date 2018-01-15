@@ -14,12 +14,14 @@ angular.module('transnvFrontendApp')
             switch (window.location.hostname) {
                 case 'localhost':
                     return 'http://localhost:8000/transnv-backend/';
-                case 'admin.inexdeo.robertobocanegra.com':
-                    return 'http://inexdeo.robertobocanegra.com/api/';
-                case 'iedsa.com.pe':
-                    return 'http://iedsa.com.pe/api/';
-                case 'www.iedsa.com.pe':
-                    return 'http://iedsa.com.pe/api/';
+                case 'transnv.robertobocanegra.com':
+                    return 'http://transnv.robertobocanegra.com/api/';
+                case 'www.transnv.robertobocanegra.com':
+                    return 'http://transnv.robertobocanegra.com/api/';
+                case 'transnv.com.pe':
+                    return 'http://transnv.com.pe/api/';
+                case 'www.transnv.com.pe':
+                    return 'http://transnv.com.pe/api/';
             }
         }
     };
