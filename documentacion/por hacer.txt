@@ -1,11 +1,13 @@
 Transportes NV
 1. texto principal - ingreso
-2. cambiar icono
-3. servicio 1
-4. servicio 2
-5. servicio 3
-6. ubicacion
-7. borrar opcion clientes
-8. agregar a nosotros -> nuestra flota -> nuestro personal
-9. Agregar pagina Certificaciones
-10. Polizas y Seguros
+2. quienes somos - mision - vision
+3. historia
+4. cambiar icono
+5. servicio 1
+6. servicio 2
+7. servicio 3
+8. ubicacion
+9. borrar opcion clientes
+10. agregar a nosotros -> nuestra flota -> nuestro personal
+11. Agregar pagina Certificaciones
+12. Polizas y Seguros
