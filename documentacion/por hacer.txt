@@ -12,3 +12,4 @@ Transportes NV
 11. Agregar pagina Certificaciones
 12. Polizas y Seguros
 13. Enviar mensaje pidiendo historia e imagenes
+14. En cada servicio mostrar la portada
