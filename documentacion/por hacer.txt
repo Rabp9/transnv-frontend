@@ -2,7 +2,7 @@ Transportes NV
 1. texto principal - ingreso----------------------------------------------
 2. quienes somos - mision - vision----------------------------------------
 3. historia---------------------------------------------------------------
-4. cambiar icono
+4. cambiar icono---------------------------------------------------------
 5. servicio 1
 6. servicio 2
 7. servicio 3
@@ -11,4 +11,4 @@ Transportes NV
 10. agregar a nosotros -> nuestra flota -> nuestro personal
 11. Agregar pagina Certificaciones
 12. Polizas y Seguros
-13. Enviar mensaje pidieno historia e imagenes
+13. Enviar mensaje pidiendo historia e imagenes
