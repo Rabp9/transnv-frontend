@@ -2,15 +2,16 @@ Transportes NV
 1. texto principal - ingreso----------------------------------------------
 2. quienes somos - mision - vision----------------------------------------
 3. historia---------------------------------------------------------------
-4. cambiar icono---------------------------------------------------------
-5. servicio 1
-6. servicio 2
+4. cambiar icono----------------------------------------------------------
+5. servicio 1-------------------------------------------------------------
+6. servicio 2-------------------------------------------------------------
 7. servicio 3
-8. ubicacion
-9. borrar opcion clientes
-10. agregar a nosotros -> nuestra flota -> nuestro personal
-11. Agregar pagina Certificaciones
-12. Polizas y Seguros
-13. Enviar mensaje pidiendo historia e imagenes
-14. En cada servicio mostrar la portada
-15. en transnv-admin agrandar el textarea del cuerpo
+8. servicio 4
+9. ubicacion
+10. borrar opcion clientes
+11. agregar a nosotros -> nuestra flota -> nuestro personal
+12. Agregar pagina Certificaciones
+13. Polizas y Seguros
+14. Enviar mensaje pidiendo historia e imagenes
+15. En cada servicio mostrar la portada
+16. en transnv-admin agrandar el textarea del cuerpo
