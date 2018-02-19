@@ -9,12 +9,18 @@
  */
 angular.module('transnvFrontendApp')
 .controller('MainCtrl', function ($scope, $q, $rootScope, slidesservice, $sce, 
-    infosservice, imgResponsiveFilter, serviciosservice, noticiasservice, clientesservice) {
+    infosservice, imgResponsiveFilter, serviciosservice, noticiasservice, clientesservice, NgMap) {
         
     $scope.myInterval = 4000;
     $scope.noWrapSlides = false;
     $scope.path_location = $rootScope.path_location;
-    var search = ['transnv_resumen', 'ubicacion_codigo'];
+    var search = ['transnv_resumen', 'ubicacion_lat_long'];
+    $scope.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBN3iXCosOm01j8X97QyrYYGfGRRRuyMFY';
+
+    NgMap.getMap().then(function(map) {
+        $scope.map = map;
+        google.maps.event.trigger(map, 'resize'); 
+    });
     
     $scope.init = function() {
         return $q.all([
@@ -38,6 +44,9 @@ angular.module('transnvFrontendApp')
         return $sce.trustAsResourceUrl(imgResponsiveFilter(src, size));
     };
     
+    $scope.showInfo = function(event) {
+        $scope.map.showInfoWindow('myInfoWindow', this);
+    };
     
     $scope.init();
 });

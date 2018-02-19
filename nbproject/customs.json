@@ -1,5 +1,8 @@
 {
     "elements": {
+        "marker": {},
+        "info-window": {},
+        "ng-map": {},
         "slick": {}
     },
     "attributes": {
@@ -17,6 +20,9 @@
         },
         "picturefill": {
             "context": "picture"
+        },
+        "map-lazy-load": {
+            "context": "div"
         },
         "ui-sref": {
             "context": "a"

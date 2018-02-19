@@ -21,7 +21,8 @@ angular
     'ui.bootstrap',
     'zumba.angular-waypoints',
     'slick',
-    'ngPicturefill'
+    'ngPicturefill',
+    'ngMap'
 ])
 .config(function($stateProvider, $urlRouterProvider) {
     var mainState = {
@@ -131,6 +132,10 @@ angular
     $rootScope.$on('$stateChangeSuccess', function(event, toParams, fromState, fromParams) {
         $rootScope.title = $state.current.title;
     });
+    
+    $rootScope.trustAsHtml = function(string) {
+        return $sce.trustAsHtml(string);
+    };
     
     $rootScope.init();
 });
