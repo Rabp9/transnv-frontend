@@ -116,3 +116,14 @@
         text-decoration: none;
     }
 }
+
+.bg-servicios {
+    background-size: 100%;
+    background-position: center; 
+    @media (min-width: $screen-sm-min) {
+        height: 180px;
+    }
+    @media (max-width: $screen-xs-max) {
+        height: 90px;
+    }
+}
