@@ -27,11 +27,11 @@
         <div class="col-sm-6" ng-repeat="servicio in servicios">
             <div class="thumbnail">
                 <!-- Picturefill -->
-                <img ng-src="{{ path_location + 'img/servicios/' + servicio.portada }}" alt="{{ servicio.titulo }}">
+                <a ui-sref="servicios({id: {{ servicio.id }}})"><img ng-src="{{ path_location + 'img/servicios/' + servicio.portada }}" alt="{{ servicio.titulo }}"></a>
                 <div class="caption">
-                    <h3>{{ servicio.titulo }}</h3>
+                    <h3><a class="non-underscore" ui-sref="servicios({id: {{ servicio.id }}})">{{ servicio.titulo }}</a></h3>
                     <div ng-bind-html="servicio.resumen"></div>
-                    <p><a href="#" class="btn btn-primary" role="button">Ver más</a></p>
+                    <p><a ui-sref="servicios({id: {{ servicio.id }}})" class="btn btn-primary" role="button">Ver más</a></p>
                 </div>
             </div>
         </div>

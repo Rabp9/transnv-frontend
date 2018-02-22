@@ -108,10 +108,11 @@ angular
 .run(function($rootScope, $state, $window, $sce, envservice, infosservice, serviciosservice,
     noticiasservice, $q) {
     $rootScope.path_location = envservice.getHost();
-    var search = ['enlace_1_link', 'enlace_2_link', 'enlace_3_link', 'enlace_1_titulo', 
-        'enlace_2_titulo', 'enlace_3_titulo', 'telefono', 'direccion', 'email', 'facebook_link',
-        'quienes_somos_mensaje', 'historia_mensaje', 'copyright', 'directorio_mensaje',
-        'ubicacion_mensaje'];
+    
+    var search = ['quienes_somos_mensaje', 'historia_mensaje', 'directorio_mensaje',
+    'ubicacion_mensaje', 'telefono', 'email', 'facebook_link', 'enlace_1_titulo',
+    'enlace_2_titulo', 'enlace_3_titulo', 'enlace_1_link', 'enlace_2_link', 'enlace_3_link',
+    'twitter_link', 'direccion', 'copyright', 'nuestra_flota_mensaje', 'nuestro_personal_mensaje'];
     
     $rootScope.init = function() {
         $q.all([

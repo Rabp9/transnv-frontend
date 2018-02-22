@@ -14,8 +14,8 @@ Transportes NV
 13. Polizas y Seguros-----------------------------------------------------
 14. Enviar mensaje pidiendo historia e imagenes, dirección exacta---------
 15. En cada servicio mostrar la portada-----------------------------------
-16. en transnv-admin agrandar el textarea del cuerpo
-17. links en el home en servicios
+16. en transnv-admin agrandar el textarea del cuerpo----------------------
+17. links en el home en servicios-----------------------------------------
 18. agregar nuevos al infos de admin e index
 19. Implementar Nuestra Flota
 20. Implementar Nuestro Personal

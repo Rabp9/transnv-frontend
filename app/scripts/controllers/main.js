@@ -14,7 +14,7 @@ angular.module('transnvFrontendApp')
     $scope.myInterval = 4000;
     $scope.noWrapSlides = false;
     $scope.path_location = $rootScope.path_location;
-    var search = ['transnv_resumen', 'ubicacion_lat_long'];
+    var search = ['transnv_resumen', 'ubicacion_lat_lang'];
     $scope.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBN3iXCosOm01j8X97QyrYYGfGRRRuyMFY';
 
     NgMap.getMap().then(function(map) {
@@ -32,7 +32,6 @@ angular.module('transnvFrontendApp')
         ]).then(function(data) {
             $scope.slides = data[0].slides;
             $scope.infos = data[1].info;
-            $scope.ubicacion_url = $sce.trustAsResourceUrl($scope.infos.ubicacion_codigo);
             $scope.servicios = data[2].servicios;
             $scope.noticias = data[3].noticias;
             $scope.clientes = data[4].clientes;
