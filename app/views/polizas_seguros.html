@@ -1,1 +1,14 @@
-<p>This is the polizas_seguros view.</p>
+<div ng-if="imagen !== 'img/cabeceras/null'">
+    <img class="img-responsive" ng-src="{{ path_location + imagen }}" alt="Polizas y Seguros" style="width: 100%" />
+</div>
+<ol class="breadcrumb">
+    <li><a ui-sref="main">Home</a></li>
+    <li class="active">Polizas y Seguros</li>
+</ol>
+<div class="container">
+    <h2>Polizas y Seguros</h2>
+    <hr>
+    <div ng-bind-html="infos.polizas_seguros">
+    </div>
+</div>
+<br>

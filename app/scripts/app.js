@@ -126,9 +126,9 @@ angular
     var polizasSegurosState = {
         name: 'polizas-seguros',
         url: '/polizas-seguros',
-        templateUrl: 'views/polizas-seguros.html',
+        templateUrl: 'views/polizas_seguros.html',
         controller: 'PolizasSegurosCtrl',
-        controllerAs: 'polizas-somos',
+        controllerAs: 'polizas-seguros',
         title: 'Polizas y Seguros'
     };
     

@@ -1,1 +1,14 @@
-<p>This is the certificaciones view.</p>
+<div ng-if="imagen !== 'img/cabeceras/null'">
+    <img class="img-responsive" ng-src="{{ path_location + imagen }}" alt="Certificaciones" style="width: 100%" />
+</div>
+<ol class="breadcrumb">
+    <li><a ui-sref="main">Home</a></li>
+    <li class="active">Certificaciones</li>
+</ol>
+<div class="container">
+    <h2>Certificaciones</h2>
+    <hr>
+    <div ng-bind-html="infos.certificaciones">
+    </div>
+</div>
+<br>

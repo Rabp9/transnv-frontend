@@ -18,9 +18,9 @@ Transportes NV
 17. links en el home en servicios-----------------------------------------------------------------
 18. agregar nuevos al infos de admin e index------------------------------------------------------
 19. Implementar Nuestra Flota---------------------------------------------------------------------
-20. Implementar Nuestro Personal
-21. Implementar Certificaciones
-22. Implementar Polizas y Seguros
+20. Implementar Nuestro Personal------------------------------------------------------------------
+21. Implementar Certificaciones-------------------------------------------------------------------
+22. Implementar Polizas y Seguros-----------------------------------------------------------------
 23. Cambiar color a usuario: en admin
 24. Mostrar loader en main
 25. Agregar cabeceras nuestra flota, nuestro personal, certificaciones, polizas y seguros
@@ -30,3 +30,5 @@ Transportes NV
 29. Poner contenido de Polizas y Seguros
 30. Verificar imagenes que se muestran segun el tamaño
 31. Verificar el responsive
+32. verificar evento al hacer click en menus padres (nosotros, servicios, noticias, contactanos)
+33. Asegurar subir imagenes en algunos infos (certificaciones, polizas y seguros, ETC)
