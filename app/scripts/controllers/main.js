@@ -9,7 +9,8 @@
  */
 angular.module('transnvFrontendApp')
 .controller('MainCtrl', function ($scope, $q, $rootScope, slidesservice, $sce, 
-    infosservice, imgResponsiveFilter, serviciosservice, noticiasservice, clientesservice, NgMap) {
+    infosservice, imgResponsiveFilter, serviciosservice, noticiasservice, clientesservice, NgMap,
+    ngProgressFactory) {
         
     $scope.myInterval = 4000;
     $scope.noWrapSlides = false;
@@ -23,6 +24,8 @@ angular.module('transnvFrontendApp')
     });
     
     $scope.init = function() {
+        $scope.progressbar = ngProgressFactory.createInstance();
+        $scope.progressbar.start();
         return $q.all([
             slidesservice.get().$promise,
             infosservice.getDataMany(search).$promise,
@@ -35,6 +38,7 @@ angular.module('transnvFrontendApp')
             $scope.servicios = data[2].servicios;
             $scope.noticias = data[3].noticias;
             $scope.clientes = data[4].clientes;
+            $scope.progressbar.complete();
         });
     };
     
