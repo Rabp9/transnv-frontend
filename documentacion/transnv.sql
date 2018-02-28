@@ -27,7 +27,7 @@ CREATE TABLE `cabeceras` (
   `descripcion` varchar(60) NOT NULL,
   `imagen` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `cabeceras` (
 
 LOCK TABLES `cabeceras` WRITE;
 /*!40000 ALTER TABLE `cabeceras` DISABLE KEYS */;
-INSERT INTO `cabeceras` VALUES (1,'quienes-somos-cabecera',NULL),(2,'historia-cabecera',NULL),(3,'servicio-cabecera',NULL),(4,'noticia-cabecera',NULL),(5,'directorio-cabecera',NULL),(6,'ubicacion-cabecera',NULL),(7,'quienes-somos-img',NULL),(8,'historia-img',NULL),(9,'directorio-img',NULL),(10,'ubicacion-img',NULL);
+INSERT INTO `cabeceras` VALUES (1,'quienes-somos-cabecera',NULL),(2,'historia-cabecera',NULL),(3,'noticia-cabecera',NULL),(4,'directorio-cabecera',NULL),(5,'ubicacion-cabecera',NULL),(6,'quienes-somos-img',NULL),(7,'historia-img',NULL),(8,'directorio-img',NULL),(9,'ubicacion-img',NULL),(10,'nuestra-flota-cabecera','cabecera-Ilo3oohn.jpg'),(11,'nuestro-personal-cabecera','cabecera-3MPQrUmE.png'),(12,'certificaciones-cabecera','cabecera-1NYuAcev.png');
 /*!40000 ALTER TABLE `cabeceras` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,7 +190,7 @@ CREATE TABLE `infos` (
   `value` text,
   `tipo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,7 +199,7 @@ CREATE TABLE `infos` (
 
 LOCK TABLES `infos` WRITE;
 /*!40000 ALTER TABLE `infos` DISABLE KEYS */;
-INSERT INTO `infos` VALUES (1,'quienes_somos_mensaje',NULL,'p'),(2,'historia_mensaje',NULL,'p'),(3,'directorio_mensaje',NULL,'p'),(4,'ubicacion_mensaje',NULL,'p'),(5,'telefono',NULL,'t'),(6,'email',NULL,'t'),(7,'facebook_link',NULL,'t'),(8,'transnv_resumen',NULL,'p'),(9,'ubicacion_codigo',NULL,'p'),(10,'enlace_1_titulo',NULL,'t'),(11,'enlace_2_titulo',NULL,'t'),(12,'enlace_3_titulo',NULL,'t'),(13,'enlace_1_link',NULL,'t'),(14,'enlace_2_link',NULL,'t'),(15,'enlace_3_link',NULL,'t'),(16,'twitter_link',NULL,'t'),(17,'direccion',NULL,'t'),(18,'copyright',NULL,'p'),(19,'quienes_somos',NULL,'p'),(20,'mision',NULL,'p'),(21,'vision',NULL,'p'),(22,'historia',NULL,'p'),(23,'ubicacion_code',NULL,'t');
+INSERT INTO `infos` VALUES (1,'quienes_somos_mensaje',NULL,'p'),(2,'historia_mensaje',NULL,'p'),(3,'directorio_mensaje',NULL,'p'),(4,'ubicacion_mensaje',NULL,'p'),(5,'telefono',NULL,'t'),(6,'email',NULL,'t'),(7,'facebook_link',NULL,'t'),(8,'transnv_resumen',NULL,'p'),(9,'enlace_1_titulo',NULL,'t'),(10,'enlace_2_titulo',NULL,'t'),(11,'enlace_3_titulo',NULL,'t'),(12,'enlace_1_link',NULL,'t'),(13,'enlace_2_link',NULL,'t'),(14,'enlace_3_link',NULL,'t'),(15,'twitter_link',NULL,'t'),(16,'direccion',NULL,'t'),(17,'copyright',NULL,'p'),(18,'quienes_somos',NULL,'p'),(19,'mision',NULL,'p'),(20,'vision',NULL,'p'),(21,'historia',NULL,'p'),(22,'ubicacion_lat_long',NULL,'t'),(23,'nuestra_flota_mensaje','<p>dsadsadsadsa sad</p>','p'),(24,'nuestro_personal_mensaje',NULL,'p'),(25,'nuestra_flota','<div class=\"row\">\n<div class=\"col-sm-3\">\n<h3>Equipamiento y Seguridad</h3>\n<ul>\n<li>Extintores PQS</li>\n<li>Extintor de Cabina</li>\n<li>Botiqu&iacute;n implementado</li>\n<li>Conos de Seguridad</li>\n<li>Tri&aacute;ngulos</li>\n<li>Circulina destellante</li>\n<li>Salchichas contenedora de derrames</li>\n<li>Linterna Anti chispa</li>\n<li>Pico y Palana Anti chispa</li>\n<li>M&aacute;scara Respiradora</li>\n<li>Tacos de Madera y Estacas</li>\n<li>Pa&ntilde;os Absorbentes</li>\n<li>Sacos de Polietileno</li>\n<li>Arn&eacute;s con 2 l&iacute;neas de vida</li>\n<li>Rollo de Cinta Peligro</li>\n<li>KIT AE</li>\n<li>Entre otros</li>\n</ul>\n</div>\n<div class=\"col-sm-9\">\n<p>N&amp;V SAC cuenta con un gran n&uacute;mero de unidades apropiadas a todas las condiciones terrestres del Per&uacute;: VOLVO, INTERNATIONAL, FREIGHTLINER, MERCEDES y MACK</p>\n<p>Nuestras unidades cuentan con las siguientes caracter&iacute;sticas:</p>\n<ul>\n<li>Motores de Inyecci&oacute;n Electr&oacute;nica.</li>\n<li>Sistema de Frenos ABS (6S/6M).</li>\n<li>Velocidad M&aacute;xima Regulada.</li>\n<li>Sistema de Posicionamiento Global (GPS).</li>\n</ul>\n<p>Esta nueva generaci&oacute;n de veh&iacute;culos incrementan el rendimiento en conducci&oacute;n, as&iacute; mismo favorece al Medio Ambiente por cuanto los veh&iacute;culos son m&iacute;nimos (Respetan normas Europeas y Americanas).</p>\n</div>\n</div>','p'),(26,'nuestro_personal','<div class=\"row\">\n<div class=\"col-sm-3\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-Noxgrx7j.png\" alt=\"\" width=\"716\" height=\"568\" /><br /><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-Iyw1wC05.png\" alt=\"\" width=\"715\" height=\"556\" /></div>\n<div class=\"col-sm-9\">\n<p>N&amp;V SAC cuenta con personal de flota con experiencia en el manejo de unidades de transporte, brindando confianza para el traslado de su producto. Cumplimos con los reglamentos establecidos por los clientes y proveedores</p>\n<p>El personal es continuamente calificado, bajo la supervisi&oacute;n y entrenamiento de nuestra &Aacute;rea de Seguridad, la cual implementa constantemente cursos de actualizaci&oacute;n y capacitaci&oacute;n tales como:</p>\n<ul>\n<li>Control de incidentes con materiales peligrosos</li>\n<li>Haz Mat, niveles I, II y III</li>\n<li>Manejo Defensivo</li>\n<li>Primeros Auxilios</li>\n<li>Entre otros</li>\n</ul>\n</div>\n</div>','p'),(27,'certificaciones','<div class=\"row\">\n<div class=\"col-sm-12\">\n<p class=\"text-justify\">Somos una empresa de transporte terrestre de materiales peligrosos y productos para diferentes sectores industriales en el Per&uacute;, prestamos un servicio diferenciado, acorde a las necesidades de nuestros clientes, cumpliendo con las exigentes certificaciones internacionales ISO 9001, OHSAS 18001, ISO 14001,ISO 39001,ISO 28000, BASC y C&oacute;digo de Cianuro.</p>\n</div>\n</div>\n<div class=\"row\">\n<div class=\"col-sm-3\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-nv5LTZnB.png\" alt=\"\" width=\"421\" height=\"605\" /></div>\n<div class=\"col-sm-3\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-cqJfNmJo.png\" width=\"421\" height=\"605\" /></div>\n<div class=\"col-sm-3\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-vMFSIi2l.png\" width=\"421\" height=\"605\" /></div>\n<div class=\"col-sm-3\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-H3m5b1ew.png\" width=\"421\" height=\"605\" /></div>\n</div>\n<p>&nbsp;</p>\n<div class=\"row\">\n<div class=\"col-sm-3\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-L50pSUU4.png\" width=\"421\" height=\"605\" /></div>\n<div class=\"col-sm-3 col-sm-offset-1\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-TMLvk4ka.png\" width=\"421\" height=\"605\" /></div>\n<div class=\"col-sm-4 col-sm-offset-1\"><img class=\"img-responsive\" src=\"http://localhost:8000/transnv-backend/img/infos/info-564H8RNl.png\" width=\"421\" height=\"605\" /></div>\n</div>\n<p>&nbsp;</p>\n<div class=\"row\">\n<div class=\"col-sm-12\">\n<p class=\"text-justify\">Nos destacamos por nuestra gesti&oacute;n innovadora para poder ofrecer servicios altamente especializados, mediante la aplicaci&oacute;n de nuevas tecnolog&iacute;as, la seguridad de nuestras operaciones, la gesti&oacute;n eficiente de procesos y el buen desempe&ntilde;o de nuestros colaboradores altamente calificados.</p>\n</div>\n</div>','p'),(28,'polizas_seguros','<p>&nbsp;dsa dsa dsad as dsa dsa d</p>','p');
 /*!40000 ALTER TABLE `infos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -359,4 +359,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-15 15:47:51
+-- Dump completed on 2018-02-28 17:38:17
