@@ -26,7 +26,7 @@ Transportes NV
 25. Agregar cabeceras nuestra flota, nuestro personal, certificaciones, polizas y seguros----------
 26. Poner contenido de Nuestra Flota---------------------------------------------------------------
 27. Poner contenido de Nuestro Personal------------------------------------------------------------
-28. Poner contenido de Certificaciones
+28. Poner contenido de Certificaciones-------------------------------------------------------------
 29. Poner contenido de Polizas y Seguros
 30. Verificar imagenes que se muestran segun el tamaño
 31. Verificar el responsive
