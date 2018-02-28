@@ -24,11 +24,13 @@ Transportes NV
 23. Cambiar color a usuario: en admin--------------------------------------------------------------
 24. Mostrar loader en main-------------------------------------------------------------------------
 25. Agregar cabeceras nuestra flota, nuestro personal, certificaciones, polizas y seguros----------
-26. Poner contenido de Nuestra Flota
-27. Poner contenido de Nuestro Personal
+26. Poner contenido de Nuestra Flota---------------------------------------------------------------
+27. Poner contenido de Nuestro Personal------------------------------------------------------------
 28. Poner contenido de Certificaciones
 29. Poner contenido de Polizas y Seguros
 30. Verificar imagenes que se muestran segun el tamaño
 31. Verificar el responsive
 32. verificar evento al hacer click en menus padres (nosotros, servicios, noticias, contactanos)
 33. Asegurar subir imagenes en algunos infos (certificaciones, polizas y seguros, ETC)
+34. Verificar active en los menus
+35. Cabecera de Certificaciones
