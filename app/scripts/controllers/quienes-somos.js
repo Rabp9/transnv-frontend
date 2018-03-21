@@ -9,7 +9,7 @@
  */
 angular.module('transnvFrontendApp')
 .controller('QuienesSomosCtrl', function ($scope, ngProgressFactory, infosservice,
-    cabecerasservice, $q) {
+    cabecerasservice, $q, $sce, $rootScope, imgResponsiveFilter) {
     var search = ['quienes_somos', 'mision', 'vision'];
     
     $scope.init = function() {
@@ -20,9 +20,14 @@ angular.module('transnvFrontendApp')
             cabecerasservice.getByDescripcion({descripcion: 'quienes-somos-cabecera'}).$promise
         ]).then(function(data) {
             $scope.infos = data[0].info;
-            $scope.imagen = 'img/cabeceras/' + data[1].cabecera.imagen;
+            $scope.cabecera = data[1].cabecera.imagen;
             $scope.progressbar.complete();
         });
+    };
+    
+    $scope.getCabeceraSrc = function(cabecera, size) {
+        var src = $rootScope.path_location + 'img/cabeceras/' + cabecera;
+        return $sce.trustAsResourceUrl(imgResponsiveFilter(src, size));
     };
     
     $scope.init();
