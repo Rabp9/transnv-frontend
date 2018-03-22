@@ -28,10 +28,11 @@ Transportes NV
 27. Poner contenido de Nuestro Personal-----------------------------------------------------------------
 28. Poner contenido de Certificaciones------------------------------------------------------------------
 29. Poner contenido de Polizas y Seguros----------------------------------------------------------------
-30. Verificar imagenes que se muestran segun el tamaño
+30. Verificar imagenes que se muestran segun el tamaño--------------------------------------------------
 31. Verificar el responsive
 32. verificar evento al hacer click en menus padres (nosotros, servicios, noticias, contactanos)
 33. Asegurar subir imagenes en algunos infos (certificaciones, polizas y seguros, ETC)
 34. Verificar active en los menus
 35. Cabecera de Certificaciones
 36. Verificar que se vea bien la ubicacion
+37. Mostrar portadas como cabeceras en noticias
