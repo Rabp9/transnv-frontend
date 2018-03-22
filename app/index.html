@@ -28,11 +28,11 @@
     <!-- Add your site or application content here -->
     <div class="header container">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 hidden-xs">
                 <a class="navbar-brand" href="#" style="width: 180px;"><img class="img-responsive" src="images/transnv-logo.png" alt="Transportes N&V SAC"></a>
             </div>
             <div class="col-sm-9">
-                <div class="row">
+                <div class="row hidden-xs">
                     <ul class="nav navbar-nav hidden-xs pull-right">
                         <li><a href="tel:{{ infos_index.telefono }}"><span class="glyphicon glyphicon-phone"></span> {{ infos_index.telefono }}</a></li>
                         <li><a href="mailto:{{ infos_index.email }}"><span class="glyphicon glyphicon-send"></span> {{ infos_index.email }}</a></li>
@@ -52,6 +52,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
+                            <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="#" style="width: 90px;"><img class="img-responsive" src="images/transnv-logo.png" alt="Transportes N&V SAC"></a>
                         </div>
                         <div class="collapse navbar-collapse" id="js-navbar-collapse">
                             <ul class="nav navbar-nav">

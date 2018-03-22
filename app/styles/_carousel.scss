@@ -4,7 +4,7 @@
         height:    -moz-calc(86vh - #{$navbar-height});
         height:         calc(86vh - #{$navbar-height});
 
-        min-height: 400px;
+        min-height: 200px;
     }
     @media (max-width: $screen-xs-max) {
         height: 200px;
@@ -20,7 +20,7 @@
 .carousel-inner, .carousel-inner img, div.text-center {
     @media (min-width: $screen-sm-min) {
         height: 100%;
-        min-height: 400px;
+        min-height: 200px;
     }
     @media (max-width: $screen-xs-max) {
         height: 100%;

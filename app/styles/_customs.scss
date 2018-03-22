@@ -1,11 +1,3 @@
-.carousel {
-    height: -webkit-calc(100vh - #{$navbar-height});
-    height:    -moz-calc(100vh - #{$navbar-height});
-    height:         calc(100vh - #{$navbar-height});
-
-    min-height: 400px;
-}
-
 .img-slider {
     margin: auto;
     width: 100%;
@@ -20,7 +12,12 @@
 }
 
 .container-footer {
-    @include container-fixed(300px);
+    @media (min-width: $screen-sm-min) {
+        @include container-fixed(300px);
+    }
+    @media (max-width: $screen-xs-max) {
+        @include container-fixed(100px);
+    }
 }
 
 .header-section {
@@ -130,4 +127,15 @@
 
 .non-underscore:hover {
     text-decoration: none;
+}
+
+#mmNav {
+    @media (max-width: $screen-xs-max) {
+        margin: 0px;
+    }
+    .navbar-header {
+        @media (max-width: $screen-xs-max) {
+            height: 50px;
+        }
+    }
 }
