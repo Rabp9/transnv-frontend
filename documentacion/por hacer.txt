@@ -36,7 +36,9 @@ Transportes NV
 35. Cabecera de Certificaciones-------------------------------------------------------------------------
 36. Verificar que se vea bien la ubicacion--------------------------------------------------------------
 37. Mostrar portadas como cabeceras en noticias---------------------------------------------------------
-38. Link en botones de redes sociales en el footer
-39. En moviles al hacer click en item de menu, guardar menu
-40. Sub items de contactanos se ven mal, corregir
+38. Link en botones de redes sociales en el footer------------------------------------------------------
+39. En moviles al hacer click en item de menu, guardar menu---------------------------------------------
+40. Sub items de contactanos se ven mal, corregir-------------------------------------------------------
 41. Deshabilitar evento click en menus padres
+42. Si no existen noticias, no mostrar menu noticias, ni noticias en "Main"
+43. Mostrar dirección en "Ubicación"

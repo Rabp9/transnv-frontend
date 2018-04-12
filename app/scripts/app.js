@@ -170,6 +170,13 @@ angular
         $('.dropdown.open').removeClass('open');
     });
     
+    var mq = window.matchMedia("(max-width: 767px)");
+    $('.nav').on('click', function() {
+        if (mq.matches) {
+            $('.navbar-toggle').click();
+        }
+    });
+        
     $rootScope.$on('$stateChangeSuccess', function(event, toParams, fromState, fromParams) {
         $rootScope.title = $state.current.title;
     });
