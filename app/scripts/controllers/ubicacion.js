@@ -10,7 +10,7 @@
 angular.module('transnvFrontendApp')
 .controller('UbicacionCtrl', function ($scope, ngProgressFactory, infosservice,
     cabecerasservice, $q, $sce, $rootScope, imgResponsiveFilter) {
-    var search = ['ubicacion_lat_long'];
+    var search = ['ubicacion_lat_long', 'direccion'];
     
     $scope.init = function() {
         $scope.progressbar = ngProgressFactory.createInstance();
@@ -28,6 +28,10 @@ angular.module('transnvFrontendApp')
     $scope.getCabeceraSrc = function(cabecera, size) {
         var src = $rootScope.path_location + 'img/cabeceras/' + cabecera;
         return $sce.trustAsResourceUrl(imgResponsiveFilter(src, size));
+    };
+    
+    $scope.showInfo = function(event) {
+        $scope.map.showInfoWindow('myInfoWindow', this);
     };
     
     $scope.init();

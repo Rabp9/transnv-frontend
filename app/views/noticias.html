@@ -1,5 +1,12 @@
-<div ng-if="imagen !== 'img/cabeceras/null'">
-    <img class="img-responsive" ng-src="{{ path_location + imagen }}" alt="{{ noticia.titulo }}" style="width: 100%" />
+<div ng-if="cabecera !== 'img/cabeceras/null'" style="
+    height: 250px;
+    overflow: hidden;">
+    <picture picturefill>
+        <source media='(max-width: 767px)' ng-attr-srcset="{{ getCabeceraSrc(cabecera, '_small') }}">
+        <source media='(min-width: 767px)' ng-attr-srcset="{{ getCabeceraSrc(cabecera, '_large') }}">
+        <img class="img-responsive" alt="{{ noticia.titulo }}" style="width: 100%; height: 400px;
+            margin: -75px 0 -75px 0px;" ng-src="{{ getCabeceraSrc(cabecera, '_large') }}">
+    </picture>
 </div>
 <ol class="breadcrumb">
     <li><a href="#">Home</a></li>
