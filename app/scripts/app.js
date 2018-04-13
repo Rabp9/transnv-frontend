@@ -171,7 +171,7 @@ angular
     });
     
     var mq = window.matchMedia("(max-width: 767px)");
-    $('.nav').on('click', function() {
+    $('.nav a[ui-sref]').on('click', function() {
         if (mq.matches) {
             $('.navbar-toggle').click();
         }

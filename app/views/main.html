@@ -61,12 +61,17 @@
         </div>
     </div>
 </div>
-<div class="desplazamiento">
+<div class="desplazamiento" ng-show="noticias.length > 0">
     <a href="#noticias">
         <span class="glyphicon glyphicon-chevron-down"></span>
     </a>
 </div>
-<div id="noticias" class="container" zum-waypoint="waypoints" down="wp4.on" up="wp4.off" offset="75%">
+<div class="desplazamiento" ng-show="noticias.length === 0">
+    <a href="#clientes">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+    </a>
+</div>
+<div id="noticias" class="container" zum-waypoint="waypoints" down="wp4.on" up="wp4.off" offset="75%" ng-show="noticias.length > 0">
     <h2 class="header-section" ng-class="{'animated fadeInLeft': waypoints.wp4.on}">Noticias</h2>
     <slick class="row slider single-item" arrows="false" autoplay="true" autoplaySpeed="5000" 
         current-index="index" responsive="breakpoints" slides-to-show="3" slides-to-scroll="1"

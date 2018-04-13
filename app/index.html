@@ -58,7 +58,7 @@
                             <ul class="nav navbar-nav">
                                 <li ui-sref-active="active"><a ui-sref="main">Home</a></li>
                                 <li class="dropdown yamm-fw" uib-dropdown auto-close="outsideClick" ui-sref-active="active">
-                                    <a class="dropdown-toggle" uib-dropdown-toggle toggle-event="mouseover" href="#">Nosotros <b class="caret"></b></a>
+                                    <a class="dropdown-toggle" uib-dropdown-toggle href="#">Nosotros <b class="caret"></b></a>
                                     <ul role="menu" class="dropdown-menu">
                                         <li>
                                             <div class="yamm-content">
@@ -112,8 +112,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown yamm-fw" uib-dropdown auto-close="outsideClick" ui-sref-active="active">
-                                    <a class="dropdown-toggle" uib-dropdown-toggle toggle-event="mouseover" href="#">Servicios <b class="caret"></b></a>
+                                <li ng-show="servicios_index.length > 0" class="dropdown yamm-fw" uib-dropdown auto-close="outsideClick" ui-sref-active="active">
+                                    <a class="dropdown-toggle" uib-dropdown-toggle href="#">Servicios <b class="caret"></b></a>
                                     <ul role="menu" class="dropdown-menu">
                                         <li>
                                             <div class="yamm-content">
@@ -142,8 +142,8 @@
                                 </li>
                                 <li ui-sref-active="active"><a ui-sref="certificaciones">Certificaciones</a></li>
                                 <li ui-sref-active="active"><a ui-sref="polizas-seguros">Polizas y Seguros</a></li>
-                                <li class="dropdown" uib-dropdown auto-close="outsideClick" ui-sref-active="active">
-                                    <a class="dropdown-toggle" uib-dropdown-toggle toggle-event="mouseover" href="#">Noticias <b class="caret"></b></a>
+                                <li ng-show="noticias_index.length > 0"  class="dropdown" uib-dropdown auto-close="outsideClick" ui-sref-active="active">
+                                    <a class="dropdown-toggle" uib-dropdown-toggle href="#">Noticias <b class="caret"></b></a>
                                     <ul role="menu" class="dropdown-menu">
                                         <li>
                                             <div class="yamm-content">
@@ -165,7 +165,7 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown yamm-fw" uib-dropdown auto-close="outsideClick" ui-sref-active="active">
-                                    <a class="dropdown-toggle" uib-dropdown-toggle toggle-event="mouseover" href="#">Contáctanos <b class="caret"></b></a>
+                                    <a class="dropdown-toggle" uib-dropdown-toggle href="#">Contáctanos <b class="caret"></b></a>
                                     <ul role="menu" class="dropdown-menu">
                                         <li>
                                             <div class="yamm-content">
