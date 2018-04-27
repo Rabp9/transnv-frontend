@@ -16,12 +16,17 @@
     <h2 class="header-section wp1" ng-class="{'animated fadeInLeft': waypoints.wp1.on}">Transportes N&V SAC</h2>
     <div ng-bind-html="infos.transnv_resumen"></div>
 </div>
-<div class="desplazamiento">
+<div class="desplazamiento" ng-show="servicios.length > 0">
     <a href="#servicios">
         <span class="glyphicon glyphicon-chevron-down"></span>
     </a>
 </div>
-<div id="servicios" class="container" zum-waypoint="waypoints" down="wp2.on" up="wp2.off" offset="75%">
+<div class="desplazamiento" ng-show="servicios.length === 0">
+    <a href="#ubicacion">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+    </a>
+</div>
+<div id="servicios" class="container" zum-waypoint="waypoints" down="wp2.on" up="wp2.off" offset="75%" ng-show="servicios.length > 0">
     <h2 class="header-section wp2" ng-class="{'animated fadeInLeft': waypoints.wp2.on}">Servicios</h2>
     <div class="row">
         <div class="col-sm-6" ng-repeat="servicio in servicios">
@@ -37,7 +42,7 @@
         </div>
     </div>
 </div>
-<div class="desplazamiento">
+<div class="desplazamiento" ng-show="servicios.length > 0">
     <a href="#ubicacion">
         <span class="glyphicon glyphicon-chevron-down"></span>
     </a>
@@ -80,7 +85,9 @@
             <div class="row">
                 <div class="col-sm-5">
                     <!-- Picturefill -->
-                    <img class="img-responsive" ng-src="{{ path_location + 'img/noticias/' + noticia.portada }}" alt="{{ noticia.titulo }}">
+                    <a ui-sref="noticias({id: {{ noticia.id }}})">
+                        <img class="img-responsive" ng-src="{{ path_location + 'img/noticias/' + noticia.portada }}" alt="{{ noticia.titulo }}">
+                    </a>
                 </div>
                 <div class="col-sm-7">
                     <div ng-bind-html="noticia.resumen"></div>

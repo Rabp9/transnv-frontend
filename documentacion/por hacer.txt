@@ -42,5 +42,5 @@ Transportes NV
 41. Deshabilitar evento click en menus padres-----------------------------------------------------------
 42. Si no existen noticias, no mostrar menu noticias, ni noticias en "Main"-----------------------------
 43. Mostrar dirección en "Ubicación"--------------------------------------------------------------------
-44. Link a imagenes en apartado noticias en "Main"
-45. Si no existen servicios, no mostrar servicios en "Main"
+44. Link a imagenes en apartado noticias en "Main"------------------------------------------------------
+45. Si no existen servicios, no mostrar servicios en "Main"---------------------------------------------
