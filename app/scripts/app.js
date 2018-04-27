@@ -170,7 +170,7 @@ angular
         $('.dropdown.open').removeClass('open');
     });
     
-    var mq = window.matchMedia("(max-width: 767px)");
+    var mq = window.matchMedia('(max-width: 767px)');
     $('.nav a[ui-sref]').on('click', function() {
         if (mq.matches) {
             $('.navbar-toggle').click();
